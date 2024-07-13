@@ -1,15 +1,15 @@
-const {readFile} = require('fs');
+const { readFile } = require('fs');
 
-const files = ['./test.js','./demo.text','./concurrency.js'];
+const files = ['./test.js', './demo.text', './concurrency.js'];
 
-files.forEach(files=>{
+files.forEach(files => {
     // error first callback function
-    readFile(files,(err,data)=>{
+    readFile(files, (err, data) => {
 
-        if(err && err.code ==="ENDENT"){
-            console.log(files,"not found")
-        } else{
-            console.log(files,data);
+        if (err && err.code === "ENDENT") {
+            console.log(files, "not found")
+        } else {
+            console.log(files, data);
         }
     });
 });

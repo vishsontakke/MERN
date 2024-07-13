@@ -6,10 +6,10 @@ setTimeout(() => {
     console.log('inside settimeout');
 }, 0);
 
-new Promise(function(resolve){
+new Promise(function (resolve) {
     console.log('inside promise excutor');
     resolve();
-}).then(function(){
+}).then(function () {
     console.log('Promise Resolved')
 });
 
