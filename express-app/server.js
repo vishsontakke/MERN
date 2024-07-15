@@ -18,12 +18,16 @@ const authenticate = (req,res,next)=>{
 }
 // app.use(appLevelMiddleware);
 
+//set view engine
+app.set('view engine','ejs')
+
 app.use('/public',express.static( __dirname+'/images'));
 app.use('/public',express.static( __dirname+'/node_modules/bootstrap/dist'));
 
 app.get('/',(req,res)=>{
     // res.send('Express Started');
-    res.sendFile(__dirname+'/index.html')
+    // res.sendFile(__dirname+'/index.html')
+    res.render('about',{name:"Dynamic data"});
 });
 app.get('/about',(req,res)=>{
     res.send('Express About!');
